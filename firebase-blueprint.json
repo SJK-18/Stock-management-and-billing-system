@@ -1,0 +1,124 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Retail catalog product with barcode and inventory stock levels",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "sku": { "type": "string", "maxLength": 50 },
+        "barcode": { "type": "string", "maxLength": 50 },
+        "category": { "type": "string", "maxLength": 50 },
+        "retailPrice": { "type": "number" },
+        "askingRate": { "type": "number" },
+        "sellingRate": { "type": "number" },
+        "minSellingRate": { "type": "number" },
+        "costPrice": { "type": "number" },
+        "stock": { "type": "number" },
+        "minAlertThreshold": { "type": "number" },
+        "unit": { "type": "string", "maxLength": 20 },
+        "supplier": { "type": "string", "maxLength": 100 },
+        "taxRate": { "type": "number" },
+        "notes": { "type": "string", "maxLength": 500 },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "name", "sku", "retailPrice", "stock", "category"]
+    },
+    "Sale": {
+      "title": "Sale",
+      "description": "Recorded customer order or invoice transaction",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "invoiceNumber": { "type": "string", "maxLength": 50 },
+        "subtotal": { "type": "number" },
+        "askingSubtotal": { "type": "number" },
+        "bargainSavings": { "type": "number" },
+        "discountAmount": { "type": "number" },
+        "taxAmount": { "type": "number" },
+        "total": { "type": "number" },
+        "costTotal": { "type": "number" },
+        "profit": { "type": "number" },
+        "paymentMethod": { "type": "string", "maxLength": 30 },
+        "customerName": { "type": "string", "maxLength": 100 },
+        "customerEmail": { "type": "string", "maxLength": 100 },
+        "cashierName": { "type": "string", "maxLength": 100 },
+        "cashierId": { "type": "string", "maxLength": 50 },
+        "timestamp": { "type": "string" },
+        "synced": { "type": "boolean" }
+      },
+      "required": ["id", "invoiceNumber", "total", "paymentMethod", "timestamp"]
+    },
+    "User": {
+      "title": "User",
+      "description": "Store staff member with role and PIN",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "role": { "type": "string", "enum": ["admin", "manager", "cashier"] },
+        "pin": { "type": "string", "maxLength": 10 },
+        "avatar": { "type": "string", "maxLength": 10 },
+        "active": { "type": "boolean" }
+      },
+      "required": ["id", "name", "role", "pin", "active"]
+    },
+    "StoreSettings": {
+      "title": "StoreSettings",
+      "description": "Business configuration and receipt settings",
+      "type": "object",
+      "properties": {
+        "businessName": { "type": "string", "maxLength": 100 },
+        "tagline": { "type": "string", "maxLength": 150 },
+        "address": { "type": "string", "maxLength": 200 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "email": { "type": "string", "maxLength": 100 },
+        "taxId": { "type": "string", "maxLength": 50 },
+        "currency": { "type": "string", "maxLength": 10 },
+        "defaultTaxRate": { "type": "number" },
+        "receiptFooter": { "type": "string", "maxLength": 300 },
+        "invoicePrefix": { "type": "string", "maxLength": 20 },
+        "nextInvoiceNum": { "type": "number" },
+        "enableCloudSync": { "type": "boolean" }
+      },
+      "required": ["businessName", "currency", "invoicePrefix"]
+    },
+    "StockLog": {
+      "title": "StockLog",
+      "description": "Audit trail log of inventory changes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "productId": { "type": "string", "maxLength": 50 },
+        "delta": { "type": "number" },
+        "reason": { "type": "string", "maxLength": 200 },
+        "timestamp": { "type": "string" },
+        "user": { "type": "string", "maxLength": 100 }
+      },
+      "required": ["id", "productId", "delta", "reason", "timestamp", "user"]
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Store inventory products"
+    },
+    "/sales/{saleId}": {
+      "schema": "Sale",
+      "description": "Store sale transactions and invoices"
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Store staff profiles and PINs"
+    },
+    "/settings/{settingsId}": {
+      "schema": "StoreSettings",
+      "description": "Global store settings"
+    },
+    "/stockLogs/{logId}": {
+      "schema": "StockLog",
+      "description": "Historical audit logs for stock adjustments"
+    }
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Artisan Roasted Coffee Beans 250g",
+      "sku": "CF-250-ART",
+      "barcode": "890123456001",
+      "category": "Beverages",
+      "costPrice": 6.5,
+      "retailPrice": 14.99,
+      "stock": 21,
+      "minAlertThreshold": 10,
+      "unit": "bag",
+      "supplier": "Highland Roasters Co.",
+      "taxRate": 8.5,
+      "updatedAt": "2026-09-18T11:10:19.443Z"
+    },
+    {
+      "id": "prod-2",
+      "name": "Organic Raw Wildflower Honey 500g",
+      "sku": "HNY-500-WLD",
+      "barcode": "890123456002",
+      "category": "Pantry",
+      "costPrice": 4.8,
+      "retailPrice": 11.5,
+      "stock": 0,
+      "minAlertThreshold": 8,
+      "unit": "jar",
+      "supplier": "Golden Apiaries",
+      "taxRate": 5,
+      "updatedAt": "2026-09-18T11:16:28.219Z"
+    },
+    {
+      "id": "prod-3",
+      "name": "Ceramic Minimalist Mug 350ml",
+      "sku": "MUG-350-MAT",
+      "barcode": "890123456003",
+      "category": "Home & Kitchen",
+      "costPrice": 3.2,
+      "retailPrice": 9.9,
+      "stock": 0,
+      "minAlertThreshold": 5,
+      "unit": "pcs",
+      "supplier": "Clay & Co Craft",
+      "taxRate": 8.5,
+      "updatedAt": "2026-09-18T10:55:27.481Z"
+    },
+    {
+      "id": "prod-4",
+      "name": "Cold Pressed Olive Oil 750ml",
+      "sku": "OIL-750-EVO",
+      "barcode": "890123456004",
+      "category": "Pantry",
+      "costPrice": 9,
+      "retailPrice": 18.5,
+      "stock": 18,
+      "minAlertThreshold": 6,
+      "unit": "bottle",
+      "supplier": "Mediterranean Grove",
+      "taxRate": 5,
+      "updatedAt": "2026-09-18T11:16:28.219Z"
+    },
+    {
+      "id": "prod-5",
+      "name": "Eco Canvas Tote Bag - Heavyweight",
+      "sku": "TOT-HVY-NAT",
+      "barcode": "890123456005",
+      "category": "Accessories",
+      "costPrice": 4,
+      "retailPrice": 12,
+      "stock": 42,
+      "minAlertThreshold": 15,
+      "unit": "pcs",
+      "supplier": "GreenThreads Ltd",
+      "taxRate": 8.5,
+      "updatedAt": "2026-09-18T10:55:27.481Z"
+    },
+    {
+      "id": "prod-6",
+      "name": "Stainless Steel Double-Wall Tumbler",
+      "sku": "TUM-SS-500",
+      "barcode": "890123456006",
+      "category": "Home & Kitchen",
+      "costPrice": 7.5,
+      "retailPrice": 22,
+      "stock": 6,
+      "minAlertThreshold": 10,
+      "unit": "pcs",
+      "supplier": "ThermoWare Pro",
+      "taxRate": 8.5,
+      "updatedAt": "2026-09-18T11:16:28.219Z"
+    },
+    {
+      "id": "prod-7",
+      "name": "Belgian Dark Chocolate Bar 72% 100g",
+      "sku": "CHO-72-BEL",
+      "barcode": "890123456007",
+      "category": "Snacks",
+      "costPrice": 1.8,
+      "retailPrice": 4.5,
+      "stock": 64,
+      "minAlertThreshold": 20,
+      "unit": "bar",
+      "supplier": "Cacao Royale",
+      "taxRate": 8.5,
+      "updatedAt": "2026-09-18T11:16:28.219Z"
+    },
+    {
+      "id": "prod-8",
+      "name": "Handcrafted Lavender Bar Soap 120g",
+      "sku": "SOP-LAV-120",
+      "barcode": "890123456008",
+      "category": "Personal Care",
+      "costPrice": 2.1,
+      "retailPrice": 6.9,
+      "stock": 11,
+      "minAlertThreshold": 10,
+      "unit": "bar",
+      "supplier": "Pure Botanical",
+      "taxRate": 8.5,
+      "updatedAt": "2026-09-18T11:16:28.219Z"
+    }
+  ],
+  "settings": {
+    "businessName": "The Corner Market & Cafe",
+    "tagline": "Quality Provisions & Everyday Essentials",
+    "address": "482 Commerce Street, Suite 101, Metropolis, NY 10001",
+    "phone": "+1 (555) 234-8900",
+    "email": "hello@cornermarket.shop",
+    "taxId": "US-EIN-89-4209182",
+    "currency": "$",
+    "defaultTaxRate": 8.5,
+    "receiptFooter": "Thank you for shopping local! Returns accepted within 14 days with receipt.",
+    "invoicePrefix": "INV",
+    "nextInvoiceNum": 1047,
+    "enableCloudSync": true
+  },
+  "users": [
+    {
+      "id": "usr-1",
+      "name": "Elena Rostova",
+      "role": "admin",
+      "pin": "1234",
+      "avatar": "ER",
+      "active": true
+    },
+    {
+      "id": "usr-2",
+      "name": "Marcus Chen",
+      "role": "manager",
+      "pin": "2345",
+      "avatar": "MC",
+      "active": true
+    },
+    {
+      "id": "usr-3",
+      "name": "Sarah Miller",
+      "role": "cashier",
+      "pin": "3456",
+      "avatar": "SM",
+      "active": true
+    }
+  ],
+  "sales": [
+    {
+      "items": [
+        {
+          "productId": "prod-7",
+          "name": "Belgian Dark Chocolate Bar 72% 100g",
+          "price": 4.5,
+          "cost": 1.8,
+          "quantity": 1,
+          "taxRate": 8.5
+        },
+        {
+          "productId": "prod-8",
+          "name": "Handcrafted Lavender Bar Soap 120g",
+          "price": 6.9,
+          "cost": 2.1,
+          "quantity": 3,
+          "taxRate": 8.5
+        },
+        {
+          "productId": "prod-6",
+          "name": "Stainless Steel Double-Wall Tumbler",
+          "price": 22,
+          "cost": 7.5,
+          "quantity": 2,
+          "taxRate": 8.5
+        },
+        {
+          "productId": "prod-4",
+          "name": "Cold Pressed Olive Oil 750ml",
+          "price": 18.5,
+          "cost": 9,
+          "quantity": 1,
+          "taxRate": 5
+        },
+        {
+          "productId": "prod-2",
+          "name": "Organic Raw Wildflower Honey 500g",
+          "price": 11.5,
+          "cost": 4.8,
+          "quantity": 4,
+          "taxRate": 5
+        }
+      ],
+      "subtotal": 133.7,
+      "discountAmount": 0,
+      "taxAmount": 9.107,
+      "total": 142.807,
+      "costTotal": 51.3,
+      "profit": 82.39999999999999,
+      "paymentMethod": "Cash",
+      "paymentDetails": {
+        "tendered": 143,
+        "change": 0.19300000000001205,
+        "status": "completed"
+      },
+      "customerName": "Walk-in Customer",
+      "cashierName": "Marcus Chen",
+      "id": "sale-1789730188125",
+      "invoiceNumber": "INV-1046",
+      "timestamp": "2026-09-18T11:16:28.125Z",
+      "synced": true
+    },
+    {
+      "items": [
+        {
+          "productId": "prod-1",
+          "name": "Artisan Roasted Coffee Beans 250g",
+          "price": 14.99,
+          "cost": 6.5,
+          "quantity": 3,
+          "taxRate": 8.5
+        },
+        {
+          "productId": "prod-2",
+          "name": "Organic Raw Wildflower Honey 500g",
+          "price": 11.5,
+          "cost": 4.8,
+          "quantity": 1,
+          "taxRate": 5
+        }
+      ],
+      "subtotal": 56.47,
+      "discountAmount": 0,
+      "taxAmount": 4.39745,
+      "total": 60.86745,
+      "costTotal": 24.3,
+      "profit": 32.17,
+      "paymentMethod": "QR Code",
+      "paymentDetails": {
+        "provider": "Instant Pay / UPI",
+        "refId": "TXN-QR-6012",
+        "status": "completed"
+      },
+      "customerName": "Jiwan Rayamajhi",
+      "customerEmail": "thetrendtown1@gmail.com",
+      "customerPhone": "9844740374",
+      "cashierName": "Elena Rostova",
+      "id": "sale-1789729819358",
+      "invoiceNumber": "INV-1045",
+      "timestamp": "2026-09-18T11:10:19.358Z",
+      "synced": true
+    },
+    {
+      "id": "sale-1001",
+      "invoiceNumber": "INV-1039",
+      "timestamp": "2026-09-18T05:55:27.481Z",
+      "items": [
+        {
+          "productId": "prod-1",
+          "name": "Artisan Roasted Coffee Beans 250g",
+          "price": 14.99,
+          "cost": 6.5,
+          "quantity": 2,
+          "taxRate": 8.5
+        },
+        {
+          "productId": "prod-7",
+          "name": "Belgian Dark Chocolate Bar 72% 100g",
+          "price": 4.5,
+          "cost": 1.8,
+          "quantity": 1,
+          "taxRate": 8.5
+        }
+      ],
+      "subtotal": 34.48,
+      "discountAmount": 0,
+      "taxAmount": 2.93,
+      "total": 37.41,
+      "costTotal": 14.8,
+      "profit": 19.68,
+      "paymentMethod": "Card",
+      "paymentDetails": {
+        "cardType": "Visa",
+        "last4": "4242",
+        "authCode": "AUTH-8921",
+        "status": "completed"
+      },
+      "customerName": "Alex Mercer",
+      "customerEmail": "alex.m@example.com",
+      "cashierName": "Sarah Miller",
+      "synced": true
+    },
+    {
+      "id": "sale-1002",
+      "invoiceNumber": "INV-1040",
+      "timestamp": "2026-09-18T07:55:27.481Z",
+      "items": [
+        {
+          "productId": "prod-4",
+          "name": "Cold Pressed Olive Oil 750ml",
+          "price": 18.5,
+          "cost": 9,
+          "quantity": 1,
+          "taxRate": 5
+        },
+        {
+          "productId": "prod-5",
+          "name": "Eco Canvas Tote Bag - Heavyweight",
+          "price": 12,
+          "cost": 4,
+          "quantity": 1,
+          "taxRate": 8.5
+        }
+      ],
+      "subtotal": 30.5,
+      "discountAmount": 3.05,
+      "taxAmount": 2.33,
+      "total": 29.78,
+      "costTotal": 13,
+      "profit": 14.45,
+      "paymentMethod": "QR Code",
+      "paymentDetails": {
+        "provider": "Instant Pay / UPI",
+        "refId": "TXN-QR-9904",
+        "status": "completed"
+      },
+      "customerName": "David Kim",
+      "customerEmail": "david.kim@example.com",
+      "cashierName": "Elena Rostova",
+      "synced": true
+    },
+    {
+      "id": "sale-1003",
+      "invoiceNumber": "INV-1041",
+      "timestamp": "2026-09-18T09:25:27.481Z",
+      "items": [
+        {
+          "productId": "prod-6",
+          "name": "Stainless Steel Double-Wall Tumbler",
+          "price": 22,
+          "cost": 7.5,
+          "quantity": 1,
+          "taxRate": 8.5
+        },
+        {
+          "productId": "prod-1",
+          "name": "Artisan Roasted Coffee Beans 250g",
+          "price": 14.99,
+          "cost": 6.5,
+          "quantity": 1,
+          "taxRate": 8.5
+        }
+      ],
+      "subtotal": 36.99,
+      "discountAmount": 0,
+      "taxAmount": 3.14,
+      "total": 40.13,
+      "costTotal": 14,
+      "profit": 22.99,
+      "paymentMethod": "Cash",
+      "paymentDetails": {
+        "tendered": 50,
+        "change": 9.87,
+        "status": "completed"
+      },
+      "customerName": "Walk-in Customer",
+      "customerEmail": "",
+      "cashierName": "Sarah Miller",
+      "synced": true
+    }
+  ],
+  "stockLogs": [
+    {
+      "id": "log-1",
+      "productId": "prod-1",
+      "delta": 20,
+      "reason": "Restock PO-890",
+      "timestamp": "2026-09-17T10:55:27.481Z",
+      "user": "Elena Rostova"
+    },
+    {
+      "id": "log-2",
+      "productId": "prod-3",
+      "delta": -5,
+      "reason": "Store display & inventory write-off",
+      "timestamp": "2026-09-17T22:55:27.481Z",
+      "user": "Marcus Chen"
+    }
+  ],
+  "lastSyncTimestamp": "2026-09-18T11:55:12.252Z"
+}

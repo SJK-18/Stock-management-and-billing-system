@@ -1,0 +1,49 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    match /products/{productId} {
+      allow read: if true;
+      allow write: if isValidId(productId)
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 150;
+    }
+
+    match /sales/{saleId} {
+      allow read: if true;
+      allow create, update: if isValidId(saleId)
+        && request.resource.data.invoiceNumber is string;
+      allow delete: if false;
+    }
+
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if isValidId(userId)
+        && request.resource.data.name is string
+        && request.resource.data.pin is string;
+    }
+
+    match /settings/{settingsId} {
+      allow read: if true;
+      allow write: if isValidId(settingsId)
+        && request.resource.data.businessName is string;
+    }
+
+    match /stockLogs/{logId} {
+      allow read: if true;
+      allow create: if isValidId(logId)
+        && request.resource.data.productId is string;
+      allow update, delete: if false;
+    }
+  }
+}
